@@ -5,10 +5,10 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   server: {
-    // MIME türü hatalarını çözmek için server ayarlarını ekle
     mimeTypes: {
       '.js': 'application/javascript',
       '.json': 'application/json',
+      '.wasm': 'application/wasm',
     }
-  },
+  }
 })
