@@ -1,0 +1,128 @@
+.result-wrapper {
+  padding: 40px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.result-main-title {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.result-player {
+  font-size: 26px;
+  margin-bottom: 30px;
+  opacity: .9;
+}
+
+/* --- Yüzdelik Dairesi --- */
+
+.result-percentage-circle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.inner-circle {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  font-weight: 700;
+  color: white;
+  box-shadow: 0 0 25px rgba(0, 140, 255, 0.7);
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 15px rgba(0, 140, 255, 0.4); }
+  to { box-shadow: 0 0 35px rgba(0, 140, 255, 0.9); }
+}
+
+/* --- Profil Kartı --- */
+
+.result-profile-card {
+  background: rgba(0,0,0,0.25);
+  border-left: 5px solid #0df2c9;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.result-profile-card h3 {
+  margin: 0 0 10px;
+}
+
+.result-profile-card p {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+
+/* --- Yetenek ve Bonus Grid --- */
+
+.result-section {
+  margin: 35px 0;
+}
+
+.result-section h3 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 15px;
+}
+
+.stat-box, .bonus-box {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 15px;
+  border-radius: 8px;
+  backdrop-filter: blur(6px);
+  font-size: 18px;
+}
+
+.stat-box span, .bonus-box span {
+  font-weight: 700;
+  float: right;
+}
+
+/* --- Restart Button --- */
+
+.restart-btn {
+  margin-top: 40px;
+  padding: 15px 30px;
+  border: none;
+  font-size: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #fffb08, #ffb199);
+  box-shadow: 0 0 15px rgba(250, 255, 100, 0.6);
+  transition: transform .2s, box-shadow .2s;
+}
+
+.restart-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 252, 100, 0.9);
+}

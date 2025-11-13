@@ -1,0 +1,206 @@
+/* GENEL TASARIM --------------------------------------------------- */
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #0c0f16;
+  color: white;
+  overflow-x: hidden;
+}
+
+.game-container {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* --------------------------------------------------------------- */
+/* SORU KARTI ----------------------------------------------------- */
+/* --------------------------------------------------------------- */
+
+.question-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 24px;
+  backdrop-filter: blur(8px);
+  margin-top: 20px;
+  animation: fadeInUp 0.4s ease;
+}
+
+.stage-label {
+  font-size: 0.85rem;
+  color: #b9bed1;
+  margin-bottom: 6px;
+}
+
+.question-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.question-text {
+  font-size: 1rem;
+  color: #d6d8e1;
+  line-height: 1.45;
+  margin-bottom: 20px;
+}
+
+/* SEÇENEKLER --------------------------------------------------- */
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.option-btn {
+  padding: 14px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 12px;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: white;
+  transition: all 0.18s ease;
+  backdrop-filter: blur(6px);
+}
+
+.option-btn:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* --------------------------------------------------------------- */
+/* STAT BAR ------------------------------------------------------- */
+/* --------------------------------------------------------------- */
+
+.statbars-container {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 12px 0;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.stat-row {
+  display: flex;
+  align-items: center;
+  margin: 8px 16px;
+  gap: 12px;
+}
+
+.stat-label {
+  width: 110px;
+  font-size: 0.85rem;
+  color: #d0d5e4;
+}
+
+.stat-bar {
+  flex-grow: 1;
+  background: rgba(255, 255, 255, 0.12);
+  height: 10px;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.stat-bar-fill {
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.stat-value {
+  width: 40px;
+  text-align: right;
+  font-size: 0.85rem;
+  color: #cdd3e0;
+}
+
+/* --------------------------------------------------------------- */
+/* SONUÇ EKRANI --------------------------------------------------- */
+/* --------------------------------------------------------------- */
+
+.result-screen {
+  text-align: center;
+  padding: 40px 24px;
+  margin-top: 40px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  animation: fadeIn 0.6s ease;
+}
+
+.result-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.result-desc {
+  font-size: 1rem;
+  color: #d7d9e1;
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+
+.result-stats {
+  margin-bottom: 24px;
+}
+
+.result-stat-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.result-stat-key {
+  font-weight: 600;
+  color: #dfe3ee;
+}
+
+.result-stat-value {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.result-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #7b8cff;
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: 0.2s;
+}
+
+.result-btn:hover {
+  background: #8d9cff;
+}
+
+/* --------------------------------------------------------------- */
+/* ANİMASYON ------------------------------------------------------ */
+/* --------------------------------------------------------------- */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+.home-container {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(145deg, #0e0e1a, #141428);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Arkada hareket eden parlama */
+.glow-bg {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(126,63,255,0.35), transparent);
+  filter: blur(90px);
+  animation: glowMove 12s infinite linear alternate;
+}
+
+@keyframes glowMove {
+  0% { transform: translate(-200px, -200px); }
+  100% { transform: translate(200px, 200px); }
+}
+
+/* Başlık */
+.title {
+  font-size: 48px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 18px;
+  opacity: 0.8;
+  margin-bottom: 40px;
+}
+
+/* İsim giriş */
+.name-input {
+  width: 280px;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  margin-bottom: 40px;
+  text-align: center;
+  background: #ffffff18;
+  color: #fff;
+  backdrop-filter: blur(8px);
+  transition: 0.25s;
+}
+
+.name-input:focus {
+  background: #ffffff30;
+  transform: scale(1.05);
+}
+
+/* Kart Satırı */
+.cards-row {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+/* Kartların görünümü */
+.select-card {
+  width: 260px;
+  padding: 30px;
+  border-radius: 18px;
+  background: linear-gradient(160deg, #1b1b32, #202040);
+  cursor: pointer;
+  text-align: center;
+  transition: 0.35s;
+  box-shadow: 0 0 15px #000;
+  border: 1px solid #ffffff15;
+}
+
+/* Hover Efekti */
+.select-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 25px rgba(120, 90, 255, 0.7);
+}
+
+/* Kart içi */
+.select-card h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: #c7bfff;
+}
+
+.select-card p {
+  font-size: 15px;
+  opacity: 0.8;
+}
