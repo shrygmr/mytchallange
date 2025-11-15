@@ -22,7 +22,7 @@ const nodes = {
     id: "Q1",
     stageLabel: "Aşama 1 – İlk İzlenim",
     title: "Ekiple İlk Temas",
-    text: "Takım yoğun, baskı yüksek ve herkes hızlı hareket ediyor.",
+    text: "Takım yoğun, baskı yüksek ve herkes hızlı hareket ediyor.İlk hamlen ne olur?",
     isQuestion: true,
     options: [
       { text: "Teknik detaylara hemen odaklanırım.", next: "Q2", effects: { technical: 4 } },
@@ -53,9 +53,9 @@ const nodes = {
     text: "Malzeme seçimi kritik. Yanlış seçim sonraki adımları etkiler.",
     isQuestion: true,
     options: [
-      { text: "Yük altında davranışı analiz ederim.", next: "Q4", effects: { technical: 5, techBonus: 1 } }, // BONUS
-      { text: "Maliyet / performans dengesi kurarım.", next: "Q4", effects: { strategy: 3 } },
-      { text: "Daha deneyimli birine danışırım.", next: "Q4", effects: { communication: 3 } },
+      { text: "Yük altında davranışı analiz ederim.", next: "Q4", effects: { technical: 4, techBonus: 1 } }, // BONUS
+      { text: "Maliyet / performans dengesi kurarım.", next: "Q4", effects: { strategy: 4 } },
+      { text: "Daha deneyimli birine danışırım.", next: "Q4", effects: { communication: 4 } },
     ],
   },
 
@@ -67,7 +67,7 @@ const nodes = {
     isQuestion: true,
     options: [
       { text: "Tahmini modeller kurarım.", next: "Q4", effects: { strategy: 4 } },
-      { text: "Verileri doğrulayana kadar geciktiririm.", next: "Q4", effects: { ethics: 2, leadership: 2 } },
+      { text: "Verileri doğrular sonra teslim ederim.", next: "Q4", effects: { ethics: 2, leadership: 2 } },
       { text: "Hızlıca veri toplamak için ekibi yönlendiririm.", next: "Q4", effects: { leadership: 4 } },
     ],
   },
@@ -96,7 +96,7 @@ const nodes = {
     options: [
       { text: "Şeffaf olur ve düzeltirim.", next: "Q5", effects: { ethics: 6, ethicsBonus: 1 } }, // BONUS
       { text: "Dili yumuşatıp gene doğru veririm.", next: "Q5", effects: { ethics: 3, strategy: 2 } },
-      { text: "Önemli değil diyerek kabul ederim.", next: "Q5", effects: { riskPenalty: 1, risk: 3 } }, // CEZA
+      { text: "Karar arma noktasında haklı olabilir,değerlendiririm", next: "Q5", effects: { riskPenalty: 2, risk: 3 } }, // CEZA
     ],
   },
 
@@ -109,7 +109,7 @@ const nodes = {
     options: [
       { text: "Veri toplar, analiz ederim.", next: "Q6", effects: { strategy: 4 } },
       { text: "Deneme–yanılma ile ilerlerim.", next: "Q6", effects: { risk: 2, technical: 2 } },
-      { text: "Ekip fikirlerini toplarım.", next: "Q6", effects: { communication: 3 } },
+      { text: "Ekip fikirlerini toplarım.", next: "Q6", effects: { communication: 4 } },
     ],
   },
 
@@ -135,7 +135,7 @@ const nodes = {
     text: "Mühendislik tarzın hangisi?",
     isQuestion: true,
     options: [
-      { text: "Hızlı çözüm odaklı.", next: "Q8", effects: { technical: 2, risk: 1 } },
+      { text: "Hızlı çözüm odaklı.", next: "Q8", effects: { technical: 2, risk: 1,riskPenalty:1 } },
       { text: "Analitik ve sistematik.", next: "Q8", effects: { strategy: 3 } },
       { text: "Ekip çalışmasına yatkın.", next: "Q8", effects: { communication: 3 } },
     ],
@@ -166,7 +166,7 @@ const nodes = {
     isQuestion: true,
     options: [
       { text: "Detaylı neden–sonuç analizi yaparım.", next: "Q10", effects: { strategy: 4, stratBonus: 1 } }, // BONUS
-      { text: "Ekipten görüş alırım.", next: "Q10", effects: { leadership: 2, communication: 2 } },
+      { text: "Ekipten görüş alırım.", next: "Q10", effects: { leadership: 2, communication: 2,commBonus:1} },
       { text: "Tahminlerle ilerlerim.", next: "Q10", effects: { risk: 3 } },
     ],
   },
@@ -182,7 +182,7 @@ const nodes = {
     options: [
       { text: "Birebir görüşüp kök neden bulurum.", next: "Q11", effects: { leadership: 5, leadBonus: 1 } }, // BONUS
       { text: "Görev dağılımını optimize ederim.", next: "Q11", effects: { strategy: 3 } },
-      { text: "Düzelmesini beklerim.", next: "Q11", effects: { stress: 2 } },
+      { text: "Zamanla düzelecektir.", next: "Q11", effects: { stress: 2 } },
     ],
   },
 
@@ -197,7 +197,7 @@ const nodes = {
     options: [
       { text: "Kısa ve net teknik özet.", next: "Q12", effects: { technical: 3 } },
       { text: "Stratejik çerçeve ile anlatırım.", next: "Q12", effects: { communication: 3, commBonus: 1 } }, // BONUS
-      { text: "Sorunları yumuşatarak aktarırım.", next: "Q12", effects: { leadership: 2 } },
+      { text: "Sorunları yumuşatarak aktarırım.", next: "Q12", effects: { leadership: 3 } },
     ],
   },
 
@@ -210,7 +210,7 @@ const nodes = {
     options: [
       { text: "Hızlı ama kontrollü teslim.", next: "Q13", effects: { strategy: 3 } },
       { text: "Kaliteyi önceliklendiririm.", next: "Q13", effects: { technical: 3, ethics: 2 } },
-      { text: "Ekipten ek destek isterim.", next: "Q13", effects: { communication: 2 } },
+      { text: "Ekipten ek destek isterim.", next: "Q13", effects: { communication: 2,stress:1 } },
     ],
   },
 
@@ -223,7 +223,7 @@ const nodes = {
     options: [
       { text: "Görevleri sadeleştiririm.", next: "Q14", effects: { leadership: 3 } },
       { text: "Mini mola öneririm.", next: "Q14", effects: { communication: 3 } },
-      { text: "Zor dönem, devam ederiz.", next: "Q14", effects: { stress: 2 } },
+      { text: "Zor dönem, devam etmemiz gerek", next: "Q14", effects: { stress: 2,leadBonus:1 } },
     ],
   },
 
@@ -234,7 +234,7 @@ const nodes = {
     text: "Hangi yaklaşımı tercih edersin?",
     isQuestion: true,
     options: [
-      { text: "Sistematik analiz.", next: "Q15", effects: { strategy: 4 } },
+      { text: "Sistematik analiz.", next: "Q15", effects: { strategy: 3} },
       { text: "İnsan odaklı çözüm.", next: "Q15", effects: { leadership: 3 } },
       { text: "İletişimi önceliklendiririm.", next: "Q15", effects: { communication: 3 } },
     ],
@@ -253,7 +253,7 @@ const nodes = {
     options: [
       { text: "Kök neden analizi yaparım.", next: "Q16", effects: { strategy: 4, stratBonus: 1 } }, // BONUS
       { text: "Ekibi koordine edip şeffaf rapor hazırlarım.", next: "Q16", effects: { leadership: 4, leadBonus: 1 } }, // ALTERNATİF BONUS
-      { text: "Sorunu geçici çözümlerle kapatırım.", next: "Q16", effects: { riskPenalty: 1 } },
+      { text: "Soruna hızlı ve geçici bir çözüm öneririm,zaman önemli", next: "Q16", effects: { riskPenalty: 1,leadership:2 } },
     ],
   },
 
@@ -265,7 +265,7 @@ const nodes = {
     isQuestion: true,
     options: [
       { text: "Düşük risk – yavaş ilerleme.", next: "Q17", effects: { strategy: 3, risk: -1 } },
-      { text: "Orta risk – optimum çözüm.", next: "Q17", effects: { strategy: 3, leadership: 2 } },
+      { text: "Orta risk – optimum çözüm.", next: "Q17", effects: { strategy: 3, leadership: 1 } },
       { text: "Yüksek risk – hızlı ilerleme.", next: "Q17", effects: { risk: 4 } },
     ],
   },

@@ -39,7 +39,7 @@ const managementNodes = {
       {
         text: "Ortam stresli görünüyor; sürdürülebilirlik için denge lazım.",
         next: "Q2",
-        effects: { stress: 1, strategy: 2 },
+        effects: { stress: 1, strategy: 3 },
       },
     ],
   },
@@ -65,7 +65,7 @@ const managementNodes = {
       {
         text: "Müşteri tarafı beklenti ve geri bildirimlerinin analizi.",
         next: "Q3",
-        effects: { communication: 3, ethics: 1 },
+        effects: { communication: 3, ethics: 2 },
       },
     ],
   },
@@ -91,7 +91,7 @@ const managementNodes = {
       {
         text: "Paydaşlarla hızlıca iletişime geçer, beklentileri netleştiririm.",
         next: "Q4",
-        effects: { communication: 3 },
+        effects: { communication: 3,stress:1 },
       },
     ],
   },
@@ -114,11 +114,12 @@ const managementNodes = {
         text: "Kısa ek süre ister, veri kalitesini artırmaya odaklanırım.",
         next: "Q5",
         effects: { strategy: 2, communication: 1, risk: -1 },
+        bonus: {commBonus:1}
       },
       {
         text: "Tahminleri kullanıp raporu zamanında yetiştiririm.",
         next: "Q5",
-        effects: { risk: 2 },
+        effects: { risk: 3 },
       },
     ],
   },
@@ -143,9 +144,9 @@ const managementNodes = {
         effects: { ethics: 3, strategy: 1 },
       },
       {
-        text: "Etkisi düşük diye görmezden gelirim.",
+        text: "Gerçekten etkisinin düşük olduğuna karar verirse.,zamnımı harcamaz daha önemli noktalara odaklanırım",
         next: "Q6",
-        effects: { risk: 3 },
+        effects: { risk: 2,stratBonus:2},
       },
     ],
   },
@@ -446,7 +447,7 @@ const managementNodes = {
       {
         text: "Hatayı minimize ederek anlatır, çok detay paylaşmam.",
         next: "Q17",
-        effects: { risk: 2 },
+        effects: { risk: 3 },
       },
     ],
   },
@@ -493,7 +494,7 @@ const managementNodes = {
       {
         text: "Liderlik ve delege etme becerisi.",
         next: "Q19",
-        effects: { leadership: 2 },
+        effects: { leadership: 3 },
       },
       {
         text: "İletişim ve sunum becerileri.",
@@ -525,12 +526,12 @@ const managementNodes = {
       {
         text: "Kısa vadede etkisi az hissedilecek alanlarda kısıntı yaparım.",
         next: "Q20",
-        effects: { strategy: 2 },
+        effects: { strategy: 3 },
       },
       {
-        text: "En görünmeyen giderleri hızlıca azaltırım, derin analiz yapmam.",
+        text: "En görünmeyen giderleri hızlıca azaltırım, derin analiz zaman kaybettirebilir.",
         next: "Q20",
-        effects: { risk: 2 },
+        effects: { risk: 3 },
       },
     ],
   },
@@ -546,7 +547,7 @@ const managementNodes = {
       {
         text: "Veriye dayalı, stratejik ve analitik kararlar.",
         next: "END",
-        effects: { strategy: 3, technical: 1 },
+        effects: { strategy: 2, technical: 1 },
       },
       {
         text: "İnsan odaklı, kapsayıcı ve destekleyici liderlik.",
